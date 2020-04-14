@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+#mainDiv {
+  margin: 0;
+  padding: 0;
+  font-family: 'Architects Daughter', cursive;
+  background-color: white;
+  color: black;
+}
+
+#userPrompt {
+  display: inline-block;
+  height: 70px;
+  width: 310px;
+  font-style: italic;
+  color: rgb(84, 199, 252);
+}
+
+.container {
+  width: 320px;
+  padding: 8px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  border: none;
+  width: 320px;
+}
+
+#board0 {
+  background: url(https://raw.githubusercontent.com/ptrchoi/FCC-TicTacToe/master/images/board0.png);
+  background-size: cover;
+  border: none;
+}
+
+#board1 {
+  background: url(https://raw.githubusercontent.com/ptrchoi/FCC-TicTacToe/master/images/board1.png);
+  background-size: cover;
+  border: none;
+}
+
+#board2 {
+  background: url(https://raw.githubusercontent.com/ptrchoi/FCC-TicTacToe/master/images/board2.png);
+  background-size: cover;
+  border: none;
+}
+
+#board3 {
+  background: url(https://raw.githubusercontent.com/ptrchoi/FCC-TicTacToe/master/images/board3.png);
+  background-size: cover;
+  border: none;
+}
+
+#board4 {
+  background: url(https://raw.githubusercontent.com/ptrchoi/FCC-TicTacToe/master/images/board4.png);
+  background-size: cover;
+  border: none;
+}
+
+#board5 {
+  background: url(https://raw.githubusercontent.com/ptrchoi/FCC-TicTacToe/master/images/board5.png);
+  background-size: cover;
+  border: none;
+}
+
+#board6 {
+  background: url(https://raw.githubusercontent.com/ptrchoi/FCC-TicTacToe/master/images/board6.png);
+  background-size: cover;
+  border: none;
+}
+
+#board7 {
+  background: url(https://raw.githubusercontent.com/ptrchoi/FCC-TicTacToe/master/images/board7.png);
+  background-size: cover;
+  border: none;
+}
+
+#board8 {
+  background: url(https://raw.githubusercontent.com/ptrchoi/FCC-TicTacToe/master/images/board8.png);
+  background-size: cover;
+  border: none;
+}
+
+.boardPiece {
+  height: 100px;
+  width: 100px;
+  float: left;
+  font-size: 60px;
+}
+
+.xoHUD {
+  height: 50px;
+  width: 150px;
+  align-content: center;
+  background-color: rgb(205, 207, 214);
+  border: solid 2px black;
+}
+
+.xoPiece {
+  font-size: 110px;
+  pointer-events: none;
+}
+
+.scoreClass {
+  display: inline-block;
+  padding: 0px 25px;
+  width: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.scoreHUD {
+  font-size: 25px;
+  display: inline-block;
+  padding: 0px 2px;
+  width: 140px;
+  text-align: center;
+}
+
+#x-piece {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border: solid 2px black;
+  color: rgb(254, 36, 56);
+  font-size: 30px;
+}
+
+#o-piece {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: solid 2px black;
+  color: rgb(0, 118, 255);
+  font-size: 30px;
+}
+
+#x-score {
+  color: rgb(254, 36, 56);
+}
+
+#o-score {
+  color: rgb(0, 118, 255);
+}
+
+#score {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.difficultyButton {
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  width: 150px;
+  background-color: rgb(205, 207, 214);
+}
+
+#easy {
+  font-size: 25px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border: solid 2px black;
+}
+
+#hard {
+  font-size: 25px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: solid 2px black;
+}
+
+#reset {
+  font-size: 25px;
+  height: 50px;
+  width: 110px;
+  border: solid 2px black;
+  border-radius: 30px;
+  background-color: rgb(205, 207, 214);
+}
