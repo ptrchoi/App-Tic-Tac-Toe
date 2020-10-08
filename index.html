@@ -1,99 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Tic Tac Toe</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
 
-<head>
-  <title>Tic Tac Toe</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
-
-<body>
-  <div id="mainDiv" class="text-center center-block">
-    <h1>let's play <span style="color: rgb(254,36,56)">tic</span>-<span style="color: rgb(0,118,255)">tac</span>-<span style="color: rgb(68,219,94)">toe</span>!</h1>
-    <h2 id="userPrompt"></h2>
-    <div class="boardDiv container center-block">
-      <div class="wrapper">
-        <button id="board0" class="boardPiece board0"></button>
-        <button id="board1" class="boardPiece board1"></button>
-        <button id="board2" class="boardPiece board2"></button>
+  <body>
+    <div id="mainDiv" class="text-center center-block">
+      <h1>
+        <span style="color: rgb(254, 36, 56)">tic</span>-<span
+          style="color: rgb(0, 118, 255)"
+          >tac</span
+        >-<span style="color: rgb(68, 219, 94)">toe</span>
+      </h1>
+      <h2 id="userPrompt"></h2>
+      <div class="boardDiv container center-block">
+        <div class="wrapper">
+          <button id="board0" class="boardPiece board0"></button>
+          <button id="board1" class="boardPiece board1"></button>
+          <button id="board2" class="boardPiece board2"></button>
+        </div>
+        <div class="wrapper">
+          <button id="board3" class="boardPiece board3"></button>
+          <button id="board4" class="boardPiece board4"></button>
+          <button id="board5" class="boardPiece board5"></button>
+        </div>
+        <div class="wrapper">
+          <button id="board6" class="boardPiece board6"></button>
+          <button id="board7" class="boardPiece board7"></button>
+          <button id="board8" class="boardPiece board8"></button>
+        </div>
       </div>
-      <div class="wrapper">
-        <button id="board3" class="boardPiece board3"></button>
-        <button id="board4" class="boardPiece board4"></button>
-        <button id="board5" class="boardPiece board5"></button>
+      <!--End boardDiv-->
+      <br />
+      <div>
+        <div class="btn-group" role="group">
+          <button type="button" id="x-piece" class="btn btn-default xoHUD">
+            X
+          </button>
+          <button type="button" id="o-piece" class="btn btn-default xoHUD">
+            O
+          </button>
+        </div>
+        <br />
+        <div class="scoreHUD">
+          <span id="p1"></span>
+        </div>
+        <div class="scoreHUD">
+          <span id="p2"></span>
+        </div>
       </div>
-      <div class="wrapper">
-        <button id="board6" class="boardPiece board6"></button>
-        <button id="board7" class="boardPiece board7"></button>
-        <button id="board8" class="boardPiece board8"></button>
+      <div class="scoreClass">
+        <span id="x-score"></span>
       </div>
-    </div>
-    <!--End boardDiv-->
-    <br>
-    <div>
+      <div class="scoreClass">
+        <span id="o-score"></span>
+      </div>
+      <br />
       <div class="btn-group" role="group">
-        <button type="button" id="x-piece" class="btn btn-default xoHUD">X</button>
-        <button type="button" id="o-piece" class="btn btn-default xoHUD">O</button>
+        <button
+          type="button"
+          id="easy"
+          class="btn btn-default difficultyButton"
+        >
+          novice
+        </button>
+        <button
+          type="button"
+          id="hard"
+          class="btn btn-default difficultyButton"
+        >
+          expert
+        </button>
       </div>
-      <br>
-      <div class="scoreHUD">
-        <span id="p1"></span>
-      </div>
-      <div class="scoreHUD">
-        <span id="p2"></span>
+      <br />
+      <br />
+      <div>
+        <button id="reset">reset</button>
       </div>
     </div>
-    <div class="scoreClass">
-      <span id="x-score"></span>
-    </div>
-    <div class="scoreClass">
-      <span id="o-score"></span>
-    </div>
-    <br>
-    <div class="btn-group" role="group">
-      <button type="button" id="easy" class="btn btn-default difficultyButton">novice</button>
-      <button type="button" id="hard" class="btn btn-default difficultyButton">expert</button>
-    </div>
-    <br>
-    <br>
-    <div>
-      <button id="reset">reset</button>
-    </div>
-  </div>
 
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
-  </script>
-  <!-- Bootstrap -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-  </script>
-  <!-- My JavaScript -->
-  <script type="text/javascript" src="app.js"></script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "***REMOVED***",
-      authDomain: "***REMOVED***",
-      databaseURL: "***REMOVED***",
-      projectId: "ptrchoi-portfolio",
-      storageBucket: "***REMOVED***",
-      messagingSenderId: "***REMOVED***",
-      appId: "1:***REMOVED***:web:***REMOVED***",
-      measurementId: "***REMOVED***"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-
-
-</body>
-
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- My JavaScript -->
+    <script type="text/javascript" src="app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: '***REMOVED***',
+        authDomain: '***REMOVED***',
+        databaseURL: '***REMOVED***',
+        projectId: 'ptrchoi-portfolio',
+        storageBucket: '***REMOVED***',
+        messagingSenderId: '***REMOVED***',
+        appId: '1:***REMOVED***:web:***REMOVED***',
+        measurementId: '***REMOVED***',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </body>
 </html>
